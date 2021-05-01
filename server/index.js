@@ -16,17 +16,23 @@ socket.on('join', ({name, room}, callback)=>{
   socket.emit('message', {user:'admin', text:`${user.name}, welcome to room ${user.room}`});
   socket.broadcast.to(user.room).emit('message', {user:'admin', text:`${user.name}, has joined!`})
   socket.join(user.room);
+  io.to(user.room).emit('roomData', {room:user.room, users:getUsersInRoom(user.room)});
   callback();
 })
 //user generated message
 socket.on('sendMessage', (message, callback)=>{
 const user=getUser(socket.id);
 io.to(user.room).emit('message', {user:user.name, text:message})
+io.to(user.room).emit('roomData', {room:user.room, users:getUsersInRoom(user.room)})
 callback();
 })
 
 socket.on('disconnect', ()=>{
-    console.log('user has left');
+  const user=removeUser(socket.id);
+  if (user) {
+    io.to(user.room).emit('message', {user:'admin', text:`${user.name} has left.`})
+    
+  }
 })
 });
 
