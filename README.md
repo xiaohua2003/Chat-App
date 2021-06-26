@@ -2,7 +2,10 @@
 
 ## Tech: 
 React |Node.js |Express| Socket.io| Deployed on Netlify, Heroku 
--- Livepage:
+## Livepage:
+https://608e25d60f7378ad3aba9eff--elated-jennings-f62dcf.netlify.app/
+
+
 
 
 
