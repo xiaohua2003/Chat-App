@@ -1,6 +1,6 @@
 # chat-app
 
--- Tech: 
+## Tech: 
 React |Node.js |Express| Socket.io| Deployed on Netlify, Heroku 
 -- Livepage:
 
