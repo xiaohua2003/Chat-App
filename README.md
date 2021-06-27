@@ -4,9 +4,6 @@
 ## chat-app
 * Created a real-time chat application using React on the front end, with Node.js, Express, Socket.io on the back end. 
 * Use client-side and server-side WebSockets to create connections and broadcast message
-#Tech: 
-* React |Node.js |Express| Socket.io| Deployed on Netlify, Heroku 
-
 
 ## Livepage:
 https://608e25d60f7378ad3aba9eff--elated-jennings-f62dcf.netlify.app/
